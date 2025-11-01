@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* for IE and Edge */
+  scrollbar-width: none; /* for Firefox */
+}
+
+/* Smooth slide-up animation for modals or drawers */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Ensure body background scales well on all devices */
+body {
+  @apply bg-gray-50 text-black antialiased;
+}
+
+/* Handle tap highlights for mobile (prevents blue tap effect) */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Optional: smooth scroll for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive typography defaults */
+h1 {
+  @apply text-2xl sm:text-3xl font-bold;
+}
+
+h2 {
+  @apply text-xl sm:text-2xl font-semibold;
+}
+
+p {
+  @apply text-sm sm:text-base leading-relaxed;
+}
