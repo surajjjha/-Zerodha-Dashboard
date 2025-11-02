@@ -69,4 +69,9 @@ npm install
 # Run the development server
 npm run dev
 
+# Then open http://localhost:5173
+
+# Deployed link of Netlify
+https://preeminent-panda-f6fe69.netlify.app/
+
 
